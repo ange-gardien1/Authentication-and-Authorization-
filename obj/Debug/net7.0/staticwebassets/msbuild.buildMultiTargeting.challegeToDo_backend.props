@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\challegeToDo_backend.props" />
+</Project>
