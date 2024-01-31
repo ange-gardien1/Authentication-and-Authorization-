@@ -7,4 +7,5 @@ public interface IAuthService
     user CreateUser(user user);
     string Login(string email, string password);
     
+      user? GetUserById(int id);
 }

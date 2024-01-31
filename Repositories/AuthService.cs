@@ -29,6 +29,11 @@ public class AuthService : IAuthService
        return user;
     }
 
+    public user? GetUserById(int id)
+    {
+          return _context.users.FirstOrDefault(u => u.userId == id);
+    }
+
     public string Login(string email, string password)
     {
        var user = _context.users.SingleOrDefault(x => x.email == email);
