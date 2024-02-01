@@ -20,7 +20,7 @@ public class TaskController : ControllerBase
     }
   [HttpPost]
   [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-  public ActionResult<task> CreateTask(Task task)
+  public ActionResult<task> CreateTask(task task)
   {
     if (!ModelState.IsValid || task == null)
     {
@@ -37,5 +37,41 @@ public class TaskController : ControllerBase
     var newTask = _TaskRepository.CreateTask(task);
     return Created(nameof(GetTaskById), newTask);
   }
+  [HttpGet]
+  public ActionResult<IEnumerable<task>> GetAllTasks()
+  {
+    return Ok(_TaskRepository.GetTasks());
+  }
+  [HttpGet]
+  [Route("{taskId:int}")]
+  public ActionResult<task> GetTaskById(int taskId)
+  {
+    var tasks = _TaskRepository.GetTaskById(taskId);
+    if (tasks == null)
+    {
+        return NotFound();
+    }
+    return Ok(tasks);
+  }
 
+  [HttpPut]
+  [Route("{taskId:int}")]
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+  public ActionResult<task> updateTask(task task)
+  {
+    if(!ModelState.IsValid || task == null)
+    {
+        return BadRequest();
+    }
+    return Ok(_TaskRepository.UpdateTask(task));
+
+  }
+  [HttpDelete]
+  [Route("{taskId:int}")]
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+  public ActionResult DeleteTask(int taskId)
+  {
+    _TaskRepository.DeleteTaskById(taskId);
+    return NoContent();
+  }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj": {}
+    "C:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj": {
+    "C:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj",
+        "projectUniqueName": "C:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj",
         "projectName": "challegeToDo_backend",
-        "projectPath": "c:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj",
+        "projectPath": "C:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\challegeToDo_backend.csproj",
         "packagesPath": "C:\\Users\\Ange Gardien\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\obj\\",
+        "outputPath": "C:\\Users\\Ange Gardien\\OneDrive\\Desktop\\challegeToDo\\challegeToDo_backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ange Gardien\\AppData\\Roaming\\NuGet\\NuGet.Config"

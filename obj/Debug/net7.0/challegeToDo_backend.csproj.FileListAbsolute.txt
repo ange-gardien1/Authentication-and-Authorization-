@@ -66,3 +66,12 @@ C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\obj\Deb
 C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\obj\Debug\net7.0\challegeToDo_backend.pdb
 C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\obj\Debug\net7.0\challegeToDo_backend.genruntimeconfig.cache
 C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\obj\Debug\net7.0\ref\challegeToDo_backend.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ange Gardien\OneDrive\Desktop\challegeToDo\challegeToDo_backend\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
