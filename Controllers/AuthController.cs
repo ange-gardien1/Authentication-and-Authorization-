@@ -64,7 +64,7 @@ public class usersController : ControllerBase
             return Unauthorized();
         }
         
-        var userIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Tweeter_UserID");
+        var userIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Task_UserID");
         var userId = Int32.Parse(userIdClaim.Value);
 
         var user = _authService.GetUserById(userId);
