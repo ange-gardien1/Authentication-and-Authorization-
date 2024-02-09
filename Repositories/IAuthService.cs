@@ -8,4 +8,6 @@ public interface IAuthService
     string Login(string email, string password);
     
       user? GetUserById(int id);
+
+      bool IsEmailInUse (string email);
 }

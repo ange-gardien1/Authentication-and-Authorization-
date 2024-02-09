@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(
     c => {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "tweeter_api", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "challegeToDo_Api", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme {
         In = ParameterLocation.Header, 
         Description = "Please insert JWT with Bearer into field",
@@ -74,6 +74,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(builder => builder
+    .WithOrigins("http://localhost:4200")
+    .AllowAnyHeader()
+    .AllowAnyMethod());
 
 app.UseHttpsRedirection();
 

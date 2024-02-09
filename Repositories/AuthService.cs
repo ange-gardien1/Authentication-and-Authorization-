@@ -34,6 +34,11 @@ public class AuthService : IAuthService
           return _context.users.FirstOrDefault(u => u.userId == id);
     }
 
+    public bool IsEmailInUse(string email)
+    {
+        return _context.users.Any(u => u.email == email);
+    }
+
     public string Login(string email, string password)
     {
        var user = _context.users.SingleOrDefault(x => x.email == email);

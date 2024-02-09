@@ -24,10 +24,19 @@ public class usersController : ControllerBase
     {
         if(user == null || !ModelState.IsValid)
         {
-            return BadRequest();
+            return BadRequest("Invalid User Data");
+        }
+        if (_authService.IsEmailInUse(user.email))
+        {
+            return BadRequest("Email is arlead in use");
+        }
+        if(user.password.Length < 6 || !user.password.Any(char.IsDigit))
+        {
+            return BadRequest("Password must be at least 6 characters long and contain at least one digit");
+
         }
         _authService.CreateUser(user);
-        return NoContent();
+        return Ok("Registration Successfully");
     }
     [HttpGet]
     [Route("login")]
