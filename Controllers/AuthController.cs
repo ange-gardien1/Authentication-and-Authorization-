@@ -36,7 +36,7 @@ public class usersController : ControllerBase
 
         }
         _authService.CreateUser(user);
-        return Ok("Registration Successfully");
+        return Ok( new {message = "Registration Successfully"});
     }
     [HttpGet]
     [Route("login")]
