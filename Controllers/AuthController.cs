@@ -60,17 +60,33 @@ public class usersController : ControllerBase
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public ActionResult<user> GetCurrentUser() 
     {
+
+        if(!HttpContext.User.Identity.IsAuthenticated)
+        {
+            return Unauthorized();
+        }
         if (HttpContext.User == null) {
             return Unauthorized();
         }
         
         var userIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Task_UserID");
+
+          if (userIdClaim == null || string.IsNullOrEmpty(userIdClaim.Value))
+    {
+        return Unauthorized();
+    }
         var userId = Int32.Parse(userIdClaim.Value);
+
+    if (!int.TryParse(userIdClaim.Value, out int UserId))
+    {
+        // Handle the case where parsing fails
+        return BadRequest("Invalid user ID format");
+    }
 
         var user = _authService.GetUserById(userId);
 
         if (user == null) {
-            return Unauthorized();
+             return NotFound("User not found");
         }
 
         return Ok(user);
