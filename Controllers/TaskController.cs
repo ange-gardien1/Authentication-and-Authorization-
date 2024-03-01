@@ -74,4 +74,12 @@ public class TaskController : ControllerBase
     _TaskRepository.DeleteTaskById(taskId);
     return NoContent();
   }
+
+  [HttpGet]
+  [Route("user/{userId:int}")]
+  public ActionResult<Task> GetTaskByUserId(int userId)
+  {
+    var tasks = _TaskRepository.GetTasksByUserId(userId);
+    return Ok(tasks);
+  }
 }

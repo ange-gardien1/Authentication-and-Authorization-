@@ -61,26 +61,16 @@ public class usersController : ControllerBase
     public ActionResult<user> GetCurrentUser() 
     {
 
-          var userEmail = User.Identity.Name;
+      
 
-          if(string.IsNullOrEmpty(userEmail))
-          {
-            return BadRequest("Invalid user Email");
-          }
-
-          
-
-        if(!HttpContext.User.Identity.IsAuthenticated)
-        {
-            return Unauthorized();
-        }
         if (HttpContext.User == null) {
             return Unauthorized();
         }
         
-        var userIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Task_userID");
+        var userIdClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Task_UserID");
 
           if (userIdClaim == null || string.IsNullOrEmpty(userIdClaim.Value))
+
     {
         return Unauthorized();
     }
